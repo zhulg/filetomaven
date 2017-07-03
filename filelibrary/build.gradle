@@ -1,5 +1,25 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'lgfileutil'
+    bintrayName = 'lgfileutil'//在bintray网站中项目中填写的名称
+
+    publishedGroupId = 'com.lg.filelibrary'//一般为包名
+    libraryName = 'filelibrary'//library名字需要和本地的lib module一致
+    artifact = 'filelibrary'//同上
+
+    libraryDescription = 'lg file util maven test.'//项目描述
+    libraryVersion = '1.0.0'//项目版本号,只需要在每次更新的时候填写
+
+    developerId = 'jason365'//开发者Id
+    developerName = 'zhulg'//开发者名称
+    developerEmail = 'lg.json@gmail.com'//邮箱
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
@@ -29,3 +49,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
 }
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
