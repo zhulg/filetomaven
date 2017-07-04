@@ -8,6 +8,7 @@ public class FileUtil {
 
     private static final String TAG = FileUtil.class.getSimpleName();
 
+    //测试版本
     public static void fileChannelCopy(File s, File t) {
         FileInputStream fi = null;
         FileOutputStream fo = null;
